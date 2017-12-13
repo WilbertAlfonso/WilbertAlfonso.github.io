@@ -242,14 +242,14 @@ if(diai=="Fri Jul 14 2017 00:00:00 GMT-0500 (Eastern Standard Time)")
 
 localStorage.setItem('Dia_A', de);
 var no=diai;
-console.log(no);
+//console.log(no);
 d3.csv(de, function(data){
     
     data.forEach(function(d) {
       Datos.push(d);
       Ids.push(d.key);
 });
-console.log(data[0]);
+//console.log(data[0]);
 var resul=Datos.map(function(d)
 {
   return d.HeroDamage;
@@ -257,7 +257,7 @@ var resul=Datos.map(function(d)
     return parseInt(d)>parseInt(Datos[i].SiegeDamage);
 });
 
-console.log(resul);
+//console.log(resul);
 // generate some random data
 /*var series = [];
 for (var i = 0, variance = 0; i < 15000; i++) {
@@ -324,7 +324,7 @@ document.getElementById("demo").innerHTML = [d.data.HeroDamage];
       .on("mousemove", function(){  
          mousex = d3.mouse(this);
          mousex = mousex[0];
-         console.log(Math.floor(mousex/3));
+         //console.log(Math.floor(mousex/3));
          vertical.style("left", mousex + "px" )})
       .on("mouseover", function(){  
          mousex = d3.mouse(this);
@@ -344,7 +344,7 @@ document.getElementById("demo").innerHTML = [d.data.HeroDamage];
             indicef=Math.floor(mousex/3);
             inicio=1;
             elegidos=Ids.slice(indicei+(400*salto),indicef+(400*salto));
-            console.log(elegidos);
+            //console.log(elegidos);
             localStorage.setItem('seleccion', JSON.stringify(elegidos));
          }
          verticali.style("left", mousex + "px")});

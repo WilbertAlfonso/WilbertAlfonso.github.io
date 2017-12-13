@@ -4,7 +4,7 @@
     /// point coordinates that best approximate the distances using
     /// classic multidimensional scaling
     var eti = JSON.parse(localStorage.getItem("etiquetas"));
-    console.log(eti);
+    //console.log(eti);
     mds.classic = function(distances, dimensions) {
         dimensions = dimensions || 2;
 
@@ -121,7 +121,7 @@
         .on("click",function(d,i){
             localStorage.setItem('starp', d);
             window.open("Star.html", "MsgWindow", "width=900,height=500 scrolling=no");
-            console.log(d);
+            //console.log(d);
         })
         /*nodes.append("text")
             .attr("text-anchor", "middle")
